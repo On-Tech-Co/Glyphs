@@ -40,6 +40,21 @@ body {
   border-color: #007bff;
 }
 
+#color-picker-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#primary-color,
+#secondary-color {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 #icon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -52,9 +67,11 @@ body {
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
-.icon-card i {
-  font-size: 32px;
+.icon-card svg {
+  width: 48px;
+  height: 48px;
   margin-bottom: 8px;
+  transition: all 0.2s;
 }
 .icon-label {
   font-size: 0.8rem;
@@ -69,19 +86,4 @@ button.download {
   border-radius: 4px;
   font-size: 0.75rem;
   cursor: pointer;
-}
-
-#color-picker-wrapper {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-#primary-color,
-#secondary-color {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  border: none;
-  background: none;
 }
