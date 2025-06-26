@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exportador de Ícones Font Awesome</title>
+
+    <!-- CSS oficiais de ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/On-Tech-Co/Glyphs@main/icons/fontawesome/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/On-Tech-Co/Glyphs@main/icons/fontawesome/css/brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/On-Tech-Co/Glyphs@main/icons/fontawesome/css/duotone.css"
+    />
+
+    <!-- Seu CSS de grid e filtros -->
+    <link rel="stylesheet" href="export.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Exportador de Ícones Font Awesome</h1>
+
+      <div class="controls">
+        <input type="text" id="search" placeholder="Buscar ícone…" />
+
+        <!-- Color Picker Customizado -->
+        <div id="color-picker-wrapper">
+          <label for="primary-color">Cor Primária:</label>
+          <input type="color" id="primary-color" />
+          <label for="secondary-color">Cor Secundária:</label>
+          <input type="color" id="secondary-color" style="display: none" />
+        </div>
+
+        <!-- Filtros -->
+        <div id="package-filter" class="filter"></div>
+        <div id="style-filter" class="filter"></div>
+      </div>
+
+      <div id="icon-grid"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js"></script>
+    <script type="module" src="export.js"></script>
+  </body>
+</html>
